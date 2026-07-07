@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="only light" />
+<meta name="supported-color-schemes" content="light" />
 <title>Aishwarya Deshmukh | Enterprise Customer Success & Account Management</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%2327324A%22/%3E%3Ctext x=%2232%22 y=%2243%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2234%22 font-weight=%22700%22 fill=%22%23F8F7F4%22%3EA%3C/text%3E%3C/svg%3E" />
 <meta name="description" content="Enterprise Customer Success and Account Management portfolio by Aishwarya Deshmukh. $6M to $8M portfolio NRR, 88% retention, $600K+ expansion revenue and zero-to-one GTM systems." />
@@ -18,17 +19,19 @@
 <meta property="og:description" content="Builds from zero. Scales to retain. $6M to $8M portfolio NRR, 88% retention and $600K+ expansion revenue." />
 <meta property="og:url" content="https://aishwaryadeshmukh.com/" />
 <meta property="og:site_name" content="Aishwarya Deshmukh" />
-<meta property="og:image" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg" />
-<meta property="og:image:secure_url" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg" />
+<meta property="og:image" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg?v=20260707" />
+<meta property="og:image:url" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg?v=20260707" />
+<meta property="og:image:secure_url" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg?v=20260707" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Aishwarya Deshmukh, Enterprise Customer Success and Account Management professional" />
 
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://aishwaryadeshmukh.com/" />
 <meta name="twitter:title" content="Aishwarya Deshmukh | Enterprise Customer Success & Account Management" />
 <meta name="twitter:description" content="Builds from zero. Scales to retain. $6M to $8M portfolio NRR, 88% retention and $600K+ expansion revenue." />
-<meta name="twitter:image" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg" />
+<meta name="twitter:image" content="https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg?v=20260707" />
 <meta name="twitter:image:alt" content="Aishwarya Deshmukh portfolio preview" />
 <script type="application/ld+json">
 {
@@ -36,7 +39,7 @@
   "@type": "Person",
   "name": "Aishwarya Deshmukh",
   "jobTitle": "Enterprise Customer Success and Account Management Professional",
-  "image": "https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg",
+  "image": "https://aishwaryadeshmukh.com/aishwarya-deshmukh-og.jpg?v=20260707",
   "address": {"@type": "PostalAddress", "addressLocality": "San Jose", "addressRegion": "CA", "addressCountry": "US"},
   "email": "mailto:aishwaryad31@gmail.com",
   "url": "https://aishwaryadeshmukh.com/",
@@ -480,7 +483,7 @@ ul li::marker{color:#161616}
   transition:transform .18s ease
 }
 .skip-link:focus{transform:translateY(0)}
-section{content-visibility:auto;contain-intrinsic-size:700px}
+section{content-visibility:visible}
 .hero{content-visibility:visible}
 li::marker{color:var(--ink)}
 .flag:before{color:var(--ink)!important}
@@ -699,34 +702,110 @@ li::marker,
   }
 }
 
+
+/* ===== MOBILE PALETTE, NAV SPACING AND ANCHOR RELIABILITY ===== */
+html{
+  scroll-padding-top:104px;
+}
+
+@media(max-width:680px){
+  :root{
+    --bg:#F8F7F4;
+    --ink:#161616;
+    --muted:#5F6368;
+    --line:#E5E7EB;
+    --card:#FFFFFF;
+    --accent:#0F766E;
+    --accent2:#0F766E;
+    --cta:#27324A;
+    --ctah:#192238;
+    --ctaText:#FFFFFF;
+  }
+
+  html,
+  body{
+    color-scheme:only light !important;
+    background-color:var(--bg) !important;
+  }
+
+  body{
+    /* Mobile gradients are deliberately lighter and separated so they do not mix into an olive cast. */
+    background:
+      radial-gradient(circle at -12% -4%,rgba(200,153,85,.12),transparent 34rem),
+      radial-gradient(circle at 112% 5%,rgba(15,118,110,.075),transparent 30rem),
+      var(--bg) !important;
+    background-attachment:scroll !important;
+  }
+
+  html{
+    scroll-padding-top:88px;
+  }
+
+  section{
+    scroll-margin-top:88px;
+  }
+
+  .nav{
+    top:8px;
+    width:calc(100% - 24px);
+    margin:8px auto 0;
+    padding:10px 12px;
+    border-radius:30px;
+    background:rgba(255,255,255,.94);
+    border-color:rgba(229,231,235,.96);
+    box-shadow:0 10px 28px rgba(22,22,22,.07);
+    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(18px);
+  }
+
+  .brand{
+    font-size:16px;
+  }
+
+  .burger{
+    background:#FFFFFF;
+  }
+
+  .mobilemenu{
+    top:76px;
+    left:12px;
+    right:12px;
+    border-radius:22px;
+  }
+
+  .hero{
+    padding-top:42px;
+  }
+}
+
 </style>
 </head>
 <body>
 <a class="skip-link" href="#top">Skip to main content</a>
 
 <nav class="nav" aria-label="Primary navigation">
-  <a class="brand" data-to="top">Aishwarya Deshmukh<span class="dot">.</span></a>
+  <a class="brand" href="#top" data-to="top">Aishwarya Deshmukh<span class="dot">.</span></a>
   <div class="links">
-    <a data-to="about">About</a>
-    <a data-to="case-studies">Case Studies</a>
-    <a data-to="ai-builds">AI Builds</a>
-    <a data-to="mental-models">Mental Models</a>
-    <a data-to="gtm-lab">GTM Lab</a>
-    <a data-to="field-notes">Field Notes</a>
-    <a data-to="resume">Resume</a>
-    <a class="cta-small" data-to="contact">Get in touch</a>
+    <a href="#about" data-to="about">About</a>
+    <a href="#case-studies" data-to="case-studies">Case Studies</a>
+    <a href="#ai-builds" data-to="ai-builds">AI Builds</a>
+    <a href="#mental-models" data-to="mental-models">Mental Models</a>
+    <a href="#gtm-lab" data-to="gtm-lab">GTM Lab</a>
+    <a href="#field-notes" data-to="field-notes">Field Notes</a>
+    <a href="#resume" data-to="resume">Resume</a>
+    <a class="cta-small" href="#contact" data-to="contact">Get in touch</a>
   </div>
   <button class="burger" id="burger" aria-label="Open menu" aria-controls="mobilemenu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobilemenu" id="mobilemenu">
-  <a data-to="about">About</a>
-  <a data-to="case-studies">Case Studies</a>
-  <a data-to="ai-builds">AI Builds</a>
-  <a data-to="mental-models">Mental Models</a>
-  <a data-to="gtm-lab">GTM Lab</a>
-  <a data-to="field-notes">Field Notes</a>
-  <a data-to="resume">Resume</a>
-  <a class="cta-small" data-to="contact">Get in touch</a>
+  <a href="#about" data-to="about">About</a>
+  <a href="#case-studies" data-to="case-studies">Case Studies</a>
+  <a href="#ai-builds" data-to="ai-builds">AI Builds</a>
+  <a href="#mental-models" data-to="mental-models">Mental Models</a>
+  <a href="#gtm-lab" data-to="gtm-lab">GTM Lab</a>
+  <a href="#field-notes" data-to="field-notes">Field Notes</a>
+  <a href="#resume" data-to="resume">Resume</a>
+  <a class="cta-small" href="#contact" data-to="contact">Get in touch</a>
 </div>
 
 <!-- HERO -->
@@ -742,9 +821,9 @@ li::marker,
       <div class="metric"><b>30+</b><span>Features shipped</span></div>
     </div>
     <div class="buttons">
-      <a class="btn primary" data-to="case-studies">View Case Studies</a>
-      <a class="btn primary" data-to="ai-builds">Explore AI Builds</a>
-      <a class="btn primary" data-to="gtm-lab">Try GTM Lab</a>
+      <a class="btn primary" href="#case-studies" data-to="case-studies">View Case Studies</a>
+      <a class="btn primary" href="#ai-builds" data-to="ai-builds">Explore AI Builds</a>
+      <a class="btn primary" href="#gtm-lab" data-to="gtm-lab">Try GTM Lab</a>
     </div>
   </div>
   <div class="portrait-card">
@@ -1273,7 +1352,7 @@ li::marker,
 
 <footer class="footer wrap">
   <span>© 2026 Aishwarya Deshmukh. Built with intention.</span>
-  <a data-to="top" style="cursor:pointer">Back to top ↑</a>
+  <a href="#top" data-to="top" style="cursor:pointer">Back to top ↑</a>
 </footer>
 
 <!-- CASE STUDY MODAL -->
@@ -1285,27 +1364,62 @@ li::marker,
 </div>
 
 <script>
-/* ---------- JS-driven navigation (works in artifact preview and on Vercel) ---------- */
+/* ---------- Reliable in-page navigation ---------- */
+const burger=document.getElementById('burger');
+const mobileMenu=document.getElementById('mobilemenu');
+const stickyNav=document.querySelector('.nav');
+
+function closeMobileMenu(){
+  mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+}
+
+function goToSection(id,{behavior='smooth',updateHash=true}={}){
+  const target=document.getElementById(id);
+  if(!target)return;
+
+  /* Close the fixed menu before measuring the page. */
+  closeMobileMenu();
+
+  requestAnimationFrame(()=>{
+    const navHeight=stickyNav ? stickyNav.getBoundingClientRect().height : 0;
+    const gap=window.matchMedia('(max-width:680px)').matches ? 18 : 24;
+    const top=id==='top'
+      ? 0
+      : target.getBoundingClientRect().top+window.scrollY-navHeight-gap;
+
+    window.scrollTo({top:Math.max(0,top),behavior});
+
+    if(updateHash){
+      const next=id==='top' ? `${location.pathname}${location.search}` : `#${id}`;
+      history.replaceState(null,'',next);
+    }
+  });
+}
+
 document.querySelectorAll('[data-to]').forEach(el=>{
   el.addEventListener('click',e=>{
     e.preventDefault();
-    const t=document.getElementById(el.dataset.to);
-    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
-    document.getElementById('mobilemenu').classList.remove('open');
-    document.getElementById('burger').setAttribute('aria-expanded','false');
+    goToSection(el.dataset.to);
   });
 });
+
+/* Correct direct section links after fonts, images and all sections have finished laying out. */
+window.addEventListener('load',()=>{
+  const id=decodeURIComponent(location.hash.slice(1));
+  if(id&&document.getElementById(id)){
+    requestAnimationFrame(()=>goToSection(id,{behavior:'auto',updateHash:false}));
+  }
+});
+
 /* hamburger */
-const burger=document.getElementById('burger');
-const mobileMenu=document.getElementById('mobilemenu');
 burger.addEventListener('click',()=>{
   const isOpen=mobileMenu.classList.toggle('open');
   burger.setAttribute('aria-expanded',String(isOpen));
 });
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&mobileMenu.classList.contains('open')){
-    mobileMenu.classList.remove('open');
-    burger.setAttribute('aria-expanded','false');
+    closeMobileMenu();
     burger.focus();
   }
 });
