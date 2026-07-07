@@ -638,6 +638,67 @@ li::marker,
   }
 }
 
+
+/* ===== FULL SNAPSHOT SUBTITLE ONLY ===== */
+.resume-head-copy{
+  min-width:0;
+  flex:1 1 760px;
+}
+
+.resume-subtitle{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  max-width:860px;
+  margin:14px 0 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.45;
+  font-weight:480;
+  row-gap:8px;
+}
+
+.resume-subtitle-item{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+}
+
+.resume-subtitle-item:not(:first-child)::before{
+  content:"•";
+  flex:0 0 auto;
+  margin:0 12px;
+  color:#4F555A;
+  font-size:20px;
+  line-height:1;
+  font-weight:800;
+}
+
+@media(max-width:860px){
+  .resume-head{align-items:flex-start}
+  .resume-head-copy{flex-basis:100%}
+  .resume-subtitle{
+    max-width:100%;
+    font-size:15px;
+    row-gap:7px;
+  }
+  .resume-subtitle-item:not(:first-child)::before{
+    margin:0 10px;
+    font-size:18px;
+  }
+}
+
+@media(max-width:520px){
+  .resume-subtitle{
+    font-size:14px;
+    row-gap:8px;
+  }
+  .resume-subtitle-item:not(:first-child)::before{
+    margin:0 8px;
+    font-size:17px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1140,8 +1201,14 @@ li::marker,
 <!-- RESUME -->
 <section class="wrap" id="resume">
   <div class="resume-head">
-    <div><span class="eyebrow">Resume</span><h2>Full <span class="acc">Snapshot</span></h2>
-    <p style="color:var(--muted);margin:14px 0 0;max-width:560px;font-weight:480">Customer Success &amp; Account Management · Enterprise SaaS · 0-to-1 builder · San Jose, CA · Authorized to work in the US</p></div>
+    <div class="resume-head-copy"><span class="eyebrow">Resume</span><h2>Full <span class="acc">Snapshot</span></h2>
+    <div class="resume-subtitle" aria-label="Customer Success and Account Management, Enterprise SaaS, zero-to-one builder, San Jose California, authorized to work in the United States">
+      <span class="resume-subtitle-item">Customer Success &amp; Account Management</span>
+      <span class="resume-subtitle-item">Enterprise SaaS</span>
+      <span class="resume-subtitle-item">0-to-1 builder</span>
+      <span class="resume-subtitle-item">San Jose, CA</span>
+      <span class="resume-subtitle-item">Authorized to work in the US</span>
+    </div></div>
     <a class="btn primary" href="./Aishwarya_Deshmukh_Resume.pdf" download="Aishwarya_Deshmukh_Resume.pdf" type="application/pdf" aria-label="Download Aishwarya Deshmukh resume PDF">Download PDF</a>
   </div>
   <div class="resume-row">
