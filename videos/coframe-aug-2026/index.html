@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="only light" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Video Introduction | Aishwarya Deshmukh</title>
+  <meta name="description" content="A video introduction from Aishwarya Deshmukh." />
+  <link rel="preconnect" href="https://player.mux.com" crossorigin />
+  <link rel="preconnect" href="https://image.mux.com" crossorigin />
+  <link rel="preconnect" href="https://stream.mux.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player@3.13.2" defer></script>
+  <style>
+    :root {
+      color-scheme: only light;
+      --bg: #f8f7f4;
+      --ink: #161616;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --card: #ffffff;
+      --accent: #0f766e;
+      --gold: #c89955;
+      --cta: #27324a;
+      --cta-hover: #192238;
+      --shadow: 0 26px 70px rgba(22, 22, 22, 0.12);
+      --mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--bg); }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 5%, rgba(200, 153, 85, 0.25), transparent 32%),
+        radial-gradient(circle at 92% 9%, rgba(15, 118, 110, 0.14), transparent 34%),
+        var(--bg);
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 0;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 780;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .portfolio-link {
+      padding: 10px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: #4f555a;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      min-height: calc(100vh - 146px);
+      padding: 24px 0 64px;
+    }
+
+    .copy {
+      width: 100%;
+      max-width: 760px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 11px;
+      width: min(100%, 610px);
+      margin: 24px 0 0;
+      margin-inline: auto;
+    }
+
+    .detail-row span {
+      padding: 8px 11px;
+      border: 1px solid rgba(15, 118, 110, 0.2);
+      border-radius: 999px;
+      background: rgba(236, 253, 245, 0.78);
+      color: #315f58;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 11px;
+      width: min(100%, 610px);
+      margin-top: 25px;
+      margin-inline: auto;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 45px;
+      padding: 12px 17px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 730;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button.primary {
+      border-color: var(--cta);
+      background: var(--cta);
+      color: white;
+      box-shadow: 0 12px 28px rgba(39, 50, 74, 0.22);
+    }
+
+    .button.primary:hover { background: var(--cta-hover); }
+
+    .video-column {
+      width: 100%;
+      max-width: 390px;
+      margin: 0 auto;
+    }
+
+    .video-shell {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border: 1px solid rgba(22, 22, 22, 0.1);
+      border-radius: 30px;
+      background: transparent;
+      box-shadow: var(--shadow);
+    }
+
+    .video-shell mux-player {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 9 / 16;
+      background: transparent;
+      --media-object-fit: cover;
+      --media-object-position: center;
+    }
+
+    .video-shell mux-player::part(center play button) {
+      transform: translateY(72px);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 0 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 820px) {
+      .shell { width: min(100% - 28px, 680px); }
+
+      main {
+        min-height: auto;
+        padding: 12px 0 54px;
+      }
+
+      .copy { max-width: none; }
+
+      .video-column {
+        max-width: 370px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar { padding: 16px 0; }
+      .portfolio-link { padding: 9px 12px; font-size: 12px; }
+      main { padding-top: 8px; }
+      .eyebrow { margin-bottom: 14px; font-size: 10.5px; letter-spacing: 0.1em; }
+      .video-column { max-width: min(100%, 350px); }
+      .video-shell { border-radius: 24px; }
+      .detail-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .detail-row span:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      footer { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="https://aishwaryadeshmukh.com/">Aishwarya Deshmukh<span>.</span></a>
+      <a class="portfolio-link" href="https://aishwaryadeshmukh.com/">View full portfolio</a>
+    </header>
+
+    <main>
+      <section class="copy" aria-label="Video introduction">
+        <p class="eyebrow">Customer Success · Account Management · AI · GTM</p>
+
+        <div class="video-column">
+          <div class="video-shell">
+            <mux-player
+              playback-id="dupTnWLBK01FqI9vp01TCUsF2lB17cMfojknR2drQFoXM"
+              thumbnail-time="2"
+              preload="auto"
+              playsinline
+              accent-color="#0F766E"
+              primary-color="#FFFFFF"
+              secondary-color="#C89955"
+              metadata-video-id="coframe-aug-2026"
+              metadata-video-title="Aishwarya Deshmukh video introduction"
+              aria-label="Play Aishwarya Deshmukh video introduction"
+            ></mux-player>
+          </div>
+        </div>
+
+        <div class="detail-row" aria-label="Professional highlights">
+          <span>$8M+ NRR portfolio</span>
+          <span>$600K+ expansion</span>
+          <span>30+ product features shipped</span>
+        </div>
+
+        <div class="actions">
+          <a class="button primary" href="https://aishwaryadeshmukh.com/">Explore my portfolio</a>
+          <a class="button" href="https://www.linkedin.com/in/aishwarya-deshmukh/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button" href="../../Aishwarya_Deshmukh_Resume.pdf" download="Aishwarya_Deshmukh_Resume.pdf" type="application/pdf" aria-label="Download Aishwarya Deshmukh resume PDF">Download resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Aishwarya Deshmukh</span>
+      <span>Enterprise Customer Success · Account Management</span>
+    </footer>
+  </div>
+</body>
+</html>
